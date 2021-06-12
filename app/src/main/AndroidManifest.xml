@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dmd.coroutinesauthsearch">
 
+    <uses-permission android:name="android.permission.INTERNET" /> <!--INTERNET PERMISSION ADDED-->
+
     <application
         android:name=".CoroutinesAuthSearchApplication"
         android:allowBackup="true"
