@@ -22,5 +22,6 @@ Not much thing to write right now
 
 <h2>Commit History</h2>
 <ul>
-<li><b>Last Commit:</b> Initial Commit & jCenter removed cause will be shut down in the future & README.md added and added to-do libraries </li>
+<li><b>Last Commit:</b> Gradle upgraded to 4.2.1 & jCenter() removed & viewBinding and dataBinding enabled  </li>
+<li><b>44fbd06:</b> Initial Commit & jCenter removed cause will be shut down in the future & README.md added and added to-do libraries </li>
 </ul>
