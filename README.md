@@ -22,7 +22,8 @@ Not much thing to write right now
 
 <h2>Commit History</h2>
 <ul>
-<li><b>Last Commit:</b> InternetAccess added to Manifest & ApiConstants created & AppModule modified for QueryApi and AuthenticationApi & Base model created for request </li>
+<li><b>Last Commit:</b> BindingAdapter.kt added for Data Binding & Models totally modified  & Constants added & AuthResponse.kt created</li>
+<li><b>2451d52:</b> InternetAccess added to Manifest & ApiConstants created & AppModule modified for QueryApi and AuthenticationApi & Base model created for request </li>
 <li><b>4cf97be:</b> Retrofit and GSON added for API communication & SwipeRefreshLayout Added & Coroutines added </li>
 <li><b>be904df:</b> Hilt added for Dependency Injection &  AppModule generated from SingletonComponent::class & Class extended from Application for DI & MainActivity marked as AndroidEntryPoint & AndroidManifest.xml and build.gradle's modified for DI</li>
 <li><b>6dd8e9e:</b> Gradle upgraded to 4.2.1 & jCenter() removed & viewBinding and dataBinding enabled  </li>

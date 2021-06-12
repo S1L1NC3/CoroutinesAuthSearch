@@ -1,6 +1,6 @@
 package com.dmd.coroutinesauthsearch.model
 
-data class AuthRequest(
+data class AuthResponse(
     val username: String,
     val password: String,
     val roles: List<String>,

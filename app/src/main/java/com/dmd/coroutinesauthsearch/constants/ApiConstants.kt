@@ -8,4 +8,6 @@ object ApiConstants {
     const val BASIC_AUTH_TOKEN = "auth/basicAuthToken"
     const val AUTH_INFO = "auth/authInfo" //get
     const val PROMOTE = "auth/promote"
+    const val CONTENT_TYPE_JSON = "Content-Type: application/json"
+    const val CONTENT_TYPE_XML = "Content-Type: application/xml"
 }
