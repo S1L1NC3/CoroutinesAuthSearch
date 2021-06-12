@@ -50,6 +50,14 @@ dependencies {
     implementation("com.google.dagger:hilt-android:$hilt_version")     //Hilt added for DependencyInjection
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")    //Hilt added for DependencyInjection
 
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version" //Retrofit added API calls
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version" //GSON added for serialization
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_layout_version" //SwipeRefreshLayout added for pull to refresh Might be good
+
+    // Coroutine Lifecycle Scopes
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$coroutine_version" //Coroutines for async API calls AsyncTask deprecated on API 29
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$coroutine_version"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
