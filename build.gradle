@@ -6,6 +6,7 @@ buildscript {
         retrofit_version = '2.9.0'
         swipe_refresh_layout_version = '1.1.0'
         coroutine_version = '2.3.1'
+        ktx_version = '1.2.3'
     }
     repositories {
         google()

@@ -1,6 +1,14 @@
 <h2>Summary</h2>
 Not much thing to write right now 
 
+<h2>Technical Details:</h2>
+<ul>
+<li>Separated with Request and Response model even if they are same according to SOLID principles</li>
+<li>You can ask like why you used DI for request model, I wanted to make sure won't create instance for every call also will modify data before ApiCall</li>
+<li>Inside ViewModel's I've used .postValue instead of x.value = response.body  cause of postValue is for background thread</li>
+</ul>
+
+
 <h2>3rd Party Libraries</h2>
 <ul>
 <li><b>Retrofit:</b> Will be added for API calls </li> 
@@ -22,7 +30,8 @@ Not much thing to write right now
 
 <h2>Commit History</h2>
 <ul>
-<li><b>Last Commit:</b> BindingAdapter.kt added for Data Binding & Models totally modified  & Constants added & AuthResponse.kt created</li>
+<li><b>Last Commit:</b> Constants created & AuthenticationRepository created for authentication api call & AppModule modified & AuthRequest modified with default values from Constants to prevent null values & NetworkUtil created for internet check & MainActivity.kt modified for NetworkUtil</li>
+<li><b>e9824bc:</b> BindingAdapter.kt added for Data Binding & Models totally modified  & Constants added & AuthResponse.kt created</li>
 <li><b>2451d52:</b> InternetAccess added to Manifest & ApiConstants created & AppModule modified for QueryApi and AuthenticationApi & Base model created for request </li>
 <li><b>4cf97be:</b> Retrofit and GSON added for API communication & SwipeRefreshLayout Added & Coroutines added </li>
 <li><b>be904df:</b> Hilt added for Dependency Injection &  AppModule generated from SingletonComponent::class & Class extended from Application for DI & MainActivity marked as AndroidEntryPoint & AndroidManifest.xml and build.gradle's modified for DI</li>

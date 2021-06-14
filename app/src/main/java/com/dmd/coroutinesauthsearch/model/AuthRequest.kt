@@ -1,11 +1,14 @@
 package com.dmd.coroutinesauthsearch.model
 
+import com.dmd.coroutinesauthsearch.constants.Constants
+
+
 data class AuthRequest(
-    val username: String,
-    val password: String,
-    val roles: List<String>,
-    val permission: List<String>,
-    val authToken: String,
-    val allRoles: List<String>,
-    val allPermissions: List<String>,
+    var username: String = Constants.EMPTY_VALUE_STRING,
+    var password: String = Constants.EMPTY_VALUE_STRING,
+    var roles: List<String> = listOf(),
+    var permission: List<String> = listOf(),
+    var authToken: String = Constants.EMPTY_VALUE_STRING,
+    var allRoles: List<String> = listOf(),
+    var allPermissions: List<String> = listOf(),
 )

@@ -59,6 +59,8 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$coroutine_version" //Coroutines for async API calls AsyncTask deprecated on API 29
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$coroutine_version"
 
+    implementation "androidx.activity:activity-ktx:$ktx_version" //Jetpack KTX also known as Android KTX added for less boilerplate code
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

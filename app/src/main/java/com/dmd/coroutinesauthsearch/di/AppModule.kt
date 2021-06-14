@@ -3,6 +3,8 @@ package com.dmd.coroutinesauthsearch.di
 import com.dmd.coroutinesauthsearch.api.AuthenticationApi
 import com.dmd.coroutinesauthsearch.api.QueryApi
 import com.dmd.coroutinesauthsearch.constants.ApiConstants
+import com.dmd.coroutinesauthsearch.model.AuthRequest
+import com.dmd.coroutinesauthsearch.util.NetworkUtil
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,11 +18,15 @@ import javax.inject.Singleton
 object AppModule { //Instead of creating instance every time of retrofit we will create one time for memory management easier
     @Singleton
     @Provides
-    fun provideTestString() = "testString For DI"
+    fun provideBaseUrl() = ApiConstants.BASE_URL
 
     @Singleton
     @Provides
-    fun provideBaseUrl() = ApiConstants.BASE_URL
+    fun provideAuthRequest() = AuthRequest()
+
+    @Singleton
+    @Provides
+    fun provideNetworkUtil() = NetworkUtil()
 
     @Singleton
     @Provides
