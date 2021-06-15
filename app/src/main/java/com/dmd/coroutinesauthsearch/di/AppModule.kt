@@ -2,10 +2,11 @@ package com.dmd.coroutinesauthsearch.di
 
 import com.dmd.coroutinesauthsearch.api.AuthenticationApi
 import com.dmd.coroutinesauthsearch.api.QueryApi
-import com.dmd.coroutinesauthsearch.constants.ApiConstants
+import com.dmd.coroutinesauthsearch.constants.AuthApiConstants
 import com.dmd.coroutinesauthsearch.model.AuthRequest
 import com.dmd.coroutinesauthsearch.model.AuthResponse
 import com.dmd.coroutinesauthsearch.util.InputUtil
+import com.dmd.coroutinesauthsearch.util.IntentUtil
 import com.dmd.coroutinesauthsearch.util.NetworkUtil
 import dagger.Module
 import dagger.Provides
@@ -20,7 +21,7 @@ import javax.inject.Singleton
 object AppModule { //Instead of creating instance every time of retrofit we will create one time for memory management easier
     @Singleton
     @Provides
-    fun provideBaseUrl() = ApiConstants.BASE_URL
+    fun provideBaseUrl() = AuthApiConstants.BASE_URL
 
     @Singleton
     @Provides
@@ -37,6 +38,10 @@ object AppModule { //Instead of creating instance every time of retrofit we will
     @Singleton
     @Provides
     fun provideAuthResponse() = AuthResponse()
+
+    @Singleton
+    @Provides
+    fun provideIntentUtil() = IntentUtil()
 
 
     @Singleton

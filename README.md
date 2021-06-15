@@ -11,6 +11,8 @@ Not much thing to write right now
 </ul>
 </li>
 <li>For class namings used <b>UpperCamelCase</b> and for the resources namings used <b>SnakeCase</b></li>
+<li>I've separated Util classes, so it's easier to maintain & bug-fix & improve and it's better for principles</li>
+<li>I've also separated data classes cause of in Kotlin data classes inheritance is a bit problematic</li>
 <li>Separated with Request and Response model even if they are same according to SOLID principles</li>
 <li>You can ask like why you used DI for request model, I wanted to make sure won't create instance for every call also will modify data before ApiCall</li>
 <li>Inside ViewModel's I've used .postValue instead of x.value = response.body  cause of postValue is for background thread</li>
@@ -38,7 +40,8 @@ Not much thing to write right now
 
 <h2>Commit History</h2>
 <ul>
-<li><b>Last Commit:</b> activity_main.xml modified & bg_login_btn.xml added & colors.xml modified and also colors.xml added for night version & InputUtil.kt created and provided in AppModule & MainActivity.kt modified re-arranged  </li>
+<li><b>Last Commit:</b> AndroidManifest.xml modified for new activity & QueryActivity.kt added & IntentUtil created & Inside IntentUtil methods are overloaded & Models for QueryApi generated  & ApiEndpoints for QueryApi modified & </li>
+<li><b>51c4aa2:</b> activity_main.xml modified & bg_login_btn.xml added & colors.xml modified and also colors.xml added for night version & InputUtil.kt created and provided in AppModule & MainActivity.kt modified re-arranged  </li>
 <li><b>adfafe0:</b> styles.xml added & activity_main.xml modified & In MainActivity.kt modified and added observers & AppModule modified to reach to token from anywhere & Syntax bugs fixed </li>
 <li><b>a7775d7:</b> Constants created & AuthenticationRepository created for authentication api call & AppModule modified & AuthRequest modified with default values from Constants to prevent null values & NetworkUtil created for internet check & MainActivity.kt modified for NetworkUtil</li>
 <li><b>e9824bc:</b> BindingAdapter.kt added for Data Binding & Models totally modified  & Constants added & AuthResponse.kt created</li>
