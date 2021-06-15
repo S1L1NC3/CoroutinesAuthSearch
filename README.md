@@ -3,6 +3,14 @@ Not much thing to write right now
 
 <h2>Technical Details:</h2>
 <ul>
+<li>Also components named with this pattern &lt;LAYOUT_XML_NAME&gt;_&lt;COMPONENT_SHORT_NAME&gt;_&lt;FIELD_NAME&gt; for example =&gt; activity_main_et_username
+<ul>
+<li>Button - btn</li>
+<li>EditText - et</li>
+<li>RecyclerView - rv</li>
+</ul>
+</li>
+<li>For class namings used <b>UpperCamelCase</b> and for the resources namings used <b>SnakeCase</b></li>
 <li>Separated with Request and Response model even if they are same according to SOLID principles</li>
 <li>You can ask like why you used DI for request model, I wanted to make sure won't create instance for every call also will modify data before ApiCall</li>
 <li>Inside ViewModel's I've used .postValue instead of x.value = response.body  cause of postValue is for background thread</li>
@@ -30,7 +38,8 @@ Not much thing to write right now
 
 <h2>Commit History</h2>
 <ul>
-<li><b>Last Commit:</b> Constants created & AuthenticationRepository created for authentication api call & AppModule modified & AuthRequest modified with default values from Constants to prevent null values & NetworkUtil created for internet check & MainActivity.kt modified for NetworkUtil</li>
+<li><b>Last Commit:</b> styles.xml added & activity_main.xml modified & In MainActivity.kt modified and added observers & AppModule modified to reach to token from anywhere & Syntax bugs fixed </li>
+<li><b>a7775d7:</b> Constants created & AuthenticationRepository created for authentication api call & AppModule modified & AuthRequest modified with default values from Constants to prevent null values & NetworkUtil created for internet check & MainActivity.kt modified for NetworkUtil</li>
 <li><b>e9824bc:</b> BindingAdapter.kt added for Data Binding & Models totally modified  & Constants added & AuthResponse.kt created</li>
 <li><b>2451d52:</b> InternetAccess added to Manifest & ApiConstants created & AppModule modified for QueryApi and AuthenticationApi & Base model created for request </li>
 <li><b>4cf97be:</b> Retrofit and GSON added for API communication & SwipeRefreshLayout Added & Coroutines added </li>

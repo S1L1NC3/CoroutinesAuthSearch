@@ -1,5 +1,6 @@
 package com.dmd.coroutinesauthsearch.vm
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -26,8 +27,10 @@ class AuthenticationViewModel @Inject constructor(
     private fun authenticate() = viewModelScope.launch {
         authenticationRepository.authenticate().let { response ->
             if (response.isSuccessful){
+                Log.d("MertTrackLog", "authenticateUser: ${response.body()}")
                 _response.postValue(response.body())
             } else {
+                Log.d("MertTrackLog", "authenticateUser: ${response.body()}")
 
             }
         }

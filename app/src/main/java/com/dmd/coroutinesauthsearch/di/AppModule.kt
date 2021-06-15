@@ -4,6 +4,7 @@ import com.dmd.coroutinesauthsearch.api.AuthenticationApi
 import com.dmd.coroutinesauthsearch.api.QueryApi
 import com.dmd.coroutinesauthsearch.constants.ApiConstants
 import com.dmd.coroutinesauthsearch.model.AuthRequest
+import com.dmd.coroutinesauthsearch.model.AuthResponse
 import com.dmd.coroutinesauthsearch.util.NetworkUtil
 import dagger.Module
 import dagger.Provides
@@ -27,6 +28,10 @@ object AppModule { //Instead of creating instance every time of retrofit we will
     @Singleton
     @Provides
     fun provideNetworkUtil() = NetworkUtil()
+
+    @Singleton
+    @Provides
+    fun provideAuthResponse() = AuthResponse()
 
     @Singleton
     @Provides

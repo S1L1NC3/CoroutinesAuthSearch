@@ -1,15 +1,14 @@
 package com.dmd.coroutinesauthsearch
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
-import androidx.databinding.DataBindingUtil
+import androidx.appcompat.app.AppCompatActivity
 import com.dmd.coroutinesauthsearch.databinding.ActivityMainBinding
 import com.dmd.coroutinesauthsearch.model.AuthRequest
+import com.dmd.coroutinesauthsearch.model.AuthResponse
 import com.dmd.coroutinesauthsearch.util.NetworkUtil
 import com.dmd.coroutinesauthsearch.vm.AuthenticationViewModel
-import dagger.Provides
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -22,6 +21,9 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var networkUtil: NetworkUtil
 
+    @Inject
+    lateinit var responseModel: AuthResponse
+
     private val authenticationViewModel: AuthenticationViewModel by viewModels()
 
     private lateinit var binding: ActivityMainBinding
@@ -32,16 +34,23 @@ class MainActivity : AppCompatActivity() {
 
         networkUtil.isInternetAvailable(context = applicationContext).also { isConnected ->
             if (isConnected){
-                requestModel.username = "DasIstGut"
-                requestModel.password = "IstDasGut"
+                requestModel.username = binding.activityMainEtUsername.text.toString()
+                requestModel.password = binding.activityMainEtPassword.text.toString()
                 authenticationViewModel.authenticateUser()
+                setupObserver()
             } else{
 
             }
-            Log.d("MertTrackLog", "onCreate: $isConnected")
 
         }
 
         setContentView(binding.root)
+    }
+
+    private fun setupObserver(){
+        authenticationViewModel.responseAuth.observe(this, {
+            responseModel = it
+            Log.d("MertTrackLog", "setupObserver: $responseModel")
+        })
     }
 }

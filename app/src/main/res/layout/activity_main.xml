@@ -6,13 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <EditText
+        android:id="@+id/activity_main_et_username"
+        style="@style/defaultParentTextBox"
+        android:layout_marginEnd="64dp"
+        android:background="#00000000"
+        android:hint="@string/username_hint"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/activity_main_et_password"
+        style="@style/defaultParentTextBox"
+        android:hint="@string/password_hint"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#00000000"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toStartOf="@+id/activity_main_btn_show_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_et_username" />
+
+    <ImageButton
+        android:id="@+id/activity_main_btn_show_password"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="#0000FF"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main_et_username"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_et_username" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
