@@ -35,7 +35,25 @@
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:background="#0000FF"
+        android:onClick="showHidePassword"
+        android:contentDescription="@string/default_content_description"
         app:layout_constraintEnd_toEndOf="@+id/activity_main_et_username"
         app:layout_constraintTop_toBottomOf="@+id/activity_main_et_username" />
+
+    <Button
+        android:id="@+id/activity_main_btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="120dp"
+        android:onClick="login"
+        android:background="@drawable/bg_login_btn"
+        android:textColor="@color/colorText"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_et_password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

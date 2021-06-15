@@ -38,7 +38,8 @@ Not much thing to write right now
 
 <h2>Commit History</h2>
 <ul>
-<li><b>Last Commit:</b> styles.xml added & activity_main.xml modified & In MainActivity.kt modified and added observers & AppModule modified to reach to token from anywhere & Syntax bugs fixed </li>
+<li><b>Last Commit:</b> activity_main.xml modified & bg_login_btn.xml added & colors.xml modified and also colors.xml added for night version & InputUtil.kt created and provided in AppModule & MainActivity.kt modified re-arranged  </li>
+<li><b>adfafe0:</b> styles.xml added & activity_main.xml modified & In MainActivity.kt modified and added observers & AppModule modified to reach to token from anywhere & Syntax bugs fixed </li>
 <li><b>a7775d7:</b> Constants created & AuthenticationRepository created for authentication api call & AppModule modified & AuthRequest modified with default values from Constants to prevent null values & NetworkUtil created for internet check & MainActivity.kt modified for NetworkUtil</li>
 <li><b>e9824bc:</b> BindingAdapter.kt added for Data Binding & Models totally modified  & Constants added & AuthResponse.kt created</li>
 <li><b>2451d52:</b> InternetAccess added to Manifest & ApiConstants created & AppModule modified for QueryApi and AuthenticationApi & Base model created for request </li>

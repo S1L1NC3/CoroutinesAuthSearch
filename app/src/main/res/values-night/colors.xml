@@ -4,5 +4,5 @@
     <color name="colorPrimaryVariant">#008522</color>
     <color name="colorOnPrimary">#008020</color>
     <color name="colorOnPressed">#004d13</color>
-    <color name="colorText">#000000</color>
+    <color name="colorText">#FFFFFF</color>
 </resources>
