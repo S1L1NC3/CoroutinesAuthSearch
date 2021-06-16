@@ -6,6 +6,10 @@ import com.dmd.coroutinesauthsearch.constants.Constants
 import java.io.Serializable
 
 class IntentUtil {
+    //to parameter has to be used with ::class.java extension
+    // For example; if you go from X activity to N activity
+    // .openIntent(this@XActivity, N::class.java)
+    // .openIntent(this, N::class.java)
     fun openIntent(from: Context, to: Class<*>){
         val intent = Intent(from, to)
         from.startActivity(intent)

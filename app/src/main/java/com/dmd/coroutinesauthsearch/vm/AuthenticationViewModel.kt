@@ -16,22 +16,32 @@ class AuthenticationViewModel @Inject constructor(
     private val authenticationRepository: AuthenticationRepository
 ) : ViewModel() {
     private val _response = MutableLiveData<AuthResponse>()
+    private val _loading = MutableLiveData<Boolean>()
+    private val _isSuccess = MutableLiveData<Boolean>()
+    private val _isError = MutableLiveData<String>()
 
     val responseAuth: LiveData<AuthResponse> //To Retrieve Data From VM
         get() = _response
+    val isLoading: LiveData<Boolean>
+        get() = _loading
+    val isSuccess: LiveData<Boolean>
+        get() = _isSuccess
+    val isError: LiveData<String>
+        get() = _isError
 
     fun authenticateUser(){
         authenticate()
     }
 
     private fun authenticate() = viewModelScope.launch {
+        _loading.postValue(true)
         authenticationRepository.authenticate().let { response ->
+            _loading.postValue(false)
+            _isSuccess.postValue(response.isSuccessful) //True & False comes from isSuccessful method
             if (response.isSuccessful){
-                Log.d("MertTrackLog", "authenticateUser: ${response.body()}")
                 _response.postValue(response.body())
             } else {
-                Log.d("MertTrackLog", "authenticateUser: ${response.body()}")
-
+                _isError.postValue(response.errorBody()?.string())
             }
         }
     }

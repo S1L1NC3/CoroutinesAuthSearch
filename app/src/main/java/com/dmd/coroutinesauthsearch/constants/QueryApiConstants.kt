@@ -1,7 +1,6 @@
 package com.dmd.coroutinesauthsearch.constants
 
 object QueryApiConstants {
-    const val BASE_URL = Constants.BASE_URL
     const val EXECUTE = "query/query/execute"
     const val QUERY = "query/query/query"
     const val PARSE_QUERY = "query/query/parseQuery"

@@ -14,6 +14,7 @@ import com.dmd.coroutinesauthsearch.model.AuthResponse
 import com.dmd.coroutinesauthsearch.util.InputUtil
 import com.dmd.coroutinesauthsearch.util.IntentUtil
 import com.dmd.coroutinesauthsearch.util.NetworkUtil
+import com.dmd.coroutinesauthsearch.util.SerializationUtil
 import com.dmd.coroutinesauthsearch.vm.AuthenticationViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -35,6 +36,9 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var intentUtil: IntentUtil
 
+    @Inject
+    lateinit var serializationUtil: SerializationUtil
+
     private val authenticationViewModel: AuthenticationViewModel by viewModels()
 
     private lateinit var binding: ActivityMainBinding
@@ -52,7 +56,15 @@ class MainActivity : AppCompatActivity() {
     private fun setupObserver(){
         authenticationViewModel.responseAuth.observe(this, {
             responseModel = it
-            Log.d("MertTrackLog", "setupObserver: $responseModel")
+        })
+        authenticationViewModel.isLoading.observe(this, { isLoading ->
+            if (isLoading) Log.d("MertTrackLog", "setupObserver: $isLoading") else Log.d("MertTrackLog", "setupObserver: $isLoading")
+        })
+        authenticationViewModel.isSuccess.observe(this, { isSuccessful ->
+            if (isSuccessful) intentUtil.openIntent(this, QueryActivity::class.java)
+        })
+        authenticationViewModel.isError.observe(this, {
+            Toast.makeText(applicationContext, serializationUtil.getErrorMessage(it),Toast.LENGTH_SHORT).show()
         })
         isObserverSetupAlready = true
     }

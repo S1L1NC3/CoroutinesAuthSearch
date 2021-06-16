@@ -6,5 +6,6 @@ object Constants {
     const val EXTRAS_KEY = "com.dmd.coroutinesauthsearch.extra" //I've used this instead of BuildConfig.APPLICATION_ID
     const val CONTENT_TYPE_JSON = "Content-Type: application/json"
     const val CONTENT_TYPE_XML = "Content-Type: application/xml"
+    const val AUTHORIZATION = "Authorization: "
 
 }
