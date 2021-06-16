@@ -5,6 +5,7 @@ import com.dmd.coroutinesauthsearch.api.QueryApi
 import com.dmd.coroutinesauthsearch.constants.Constants
 import com.dmd.coroutinesauthsearch.model.AuthRequest
 import com.dmd.coroutinesauthsearch.model.AuthResponse
+import com.dmd.coroutinesauthsearch.model.QueryRequest
 import com.dmd.coroutinesauthsearch.util.InputUtil
 import com.dmd.coroutinesauthsearch.util.IntentUtil
 import com.dmd.coroutinesauthsearch.util.NetworkUtil
@@ -27,6 +28,10 @@ object AppModule { //Instead of creating instance every time of retrofit we will
     @Singleton
     @Provides
     fun provideAuthRequest() = AuthRequest()
+
+    @Singleton
+    @Provides
+    fun provideQueryRequest() = QueryRequest()
 
     @Singleton
     @Provides

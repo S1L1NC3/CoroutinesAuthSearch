@@ -4,6 +4,7 @@
     <string name="username_hint">Username</string>
     <string name="login">Login</string>
     <string name="input_error">There is a problem with your inputs</string>
+    <string name="input_error_search">You can\'t make empty search</string>
     <string name="username_password_wrong">Username Pas</string>
     <string name="connection_error">There is a problem with your internet connection</string>
     <string name="default_content_description">DasIstGut</string>

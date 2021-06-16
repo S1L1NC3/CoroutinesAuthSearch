@@ -40,7 +40,8 @@ Not much thing to write right now
 
 <h2>Commit History</h2>
 <ul>
-<li><b>Last Commit:</b> Added comments for more specified info & ViewModel added loading and isSuccess situations & Constants separated for easier to find & QueryApi Headers modified for Bearer Authentication & Error handled for API response & AppModule migrated new SerializationUtil & ErrorResponse model added & Added comment to IntentUtil &</li>
+<li><b>Last Commit:</b> QueryRepository created & DataBinding arranged for QueryActivity.kt & Strings.xml modified & QueryApi created and modified & QueryRequest created (For Sample will modify later </li>
+<li><b>32c01e2:</b> Added comments for more specified info & ViewModel added loading and isSuccess situations & Constants separated for easier to find & QueryApi Headers modified for Bearer Authentication & Error handled for API response & AppModule migrated new SerializationUtil & ErrorResponse model added & Added comment to IntentUtil &</li>
 <li><b>5f01e59:</b> AndroidManifest.xml modified for new activity & QueryActivity.kt added & IntentUtil created & Inside IntentUtil methods are overloaded & Models for QueryApi generated  & ApiEndpoints for QueryApi modified & </li>
 <li><b>51c4aa2:</b> activity_main.xml modified & bg_login_btn.xml added & colors.xml modified and also colors.xml added for night version & InputUtil.kt created and provided in AppModule & MainActivity.kt modified re-arranged  </li>
 <li><b>adfafe0:</b> styles.xml added & activity_main.xml modified & In MainActivity.kt modified and added observers & AppModule modified to reach to token from anywhere & Syntax bugs fixed </li>
